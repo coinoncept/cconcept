@@ -19,6 +19,10 @@ router.get('/about', forwardAuthenticated, (req, res) => res.render('about'));
 // service 
 router.get('/services', forwardAuthenticated, (req, res) => res.render('services'));
 
+// Giveaways 
+router.get('/giveaways', forwardAuthenticated, (req, res) => res.render('giveaways'));
+
+
 
 
 
