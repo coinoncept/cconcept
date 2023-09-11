@@ -14,11 +14,11 @@ router.get('/login', forwardAuthenticated, (req, res) => res.render('login'));
 router.get('/register', forwardAuthenticated, (req, res) => res.render('register'));
 // Register
 router.post('/register', (req, res) => {
-  const { first_name, last_name, email, password, password2, code,} = req.body;
+  const { first_name, last_name, email, wallet, password, password2, code,} = req.body;
   let errors = [];
   const referalcode = first_name + Math.floor(Math.random() * 76876559);
 
-  if (!first_name || !last_name|| !email || !password || !password2  ) {
+  if (!first_name || !last_name|| !email || !wallet || !password || !password2  ) {
     errors.push({ msg: 'Please enter all fields' });
   }
 
@@ -36,6 +36,7 @@ router.post('/register', (req, res) => {
       first_name,
       last_name,
       email,
+      wallet,
       password,
       password2
     });
@@ -48,6 +49,7 @@ router.post('/register', (req, res) => {
           first_name,
           last_name,
           email,
+          wallet,
           password,
           password2,
           code,
@@ -58,6 +60,7 @@ router.post('/register', (req, res) => {
           first_name,
           last_name,
           email,
+          wallet,
           password,
           password2,
           code,

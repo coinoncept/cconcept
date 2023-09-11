@@ -32,7 +32,7 @@ first_name: {
   },
   availbalance:{
     type: String,
-    default: '20.00'
+    default: '00.00'
   },
   activedeposit:{
     type: String,
