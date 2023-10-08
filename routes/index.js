@@ -143,8 +143,8 @@ router.get('/litecoin-pay', ensureAuthenticated, (req, res) =>
 );
 
 
-router.get('/binance-pay', ensureAuthenticated, (req, res) =>
-  res.render('binancepay', {
+router.get('/tron-pay', ensureAuthenticated, (req, res) =>
+  res.render('tronpay', {
     user: req.user
   })
 );
